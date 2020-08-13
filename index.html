@@ -1,49 +1,14 @@
 <head>
-  <title>Tom Judd's Homepage</title>
-  <style>
-    body{
-      background-color:#3399fe;
-    }
-    .block{
-      background-color:#FFFFFF;
-      border: 2px solid black;
-      border-radius:10px 10px 0px 0px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
-      display:block;
-      font-size:16px;
-      font-family: Helvetica;
-    }
-    img{
-      border-radius:15px;
-      padding: 0px 0px 0px 0px;
-    }
-    h1{
-      font-family:Helvetica;
-    }
-
-  </style>
-  <script>
-  </script>
+  <title>Tom Judd</title>
 </head>
-
 <body>
-   <img src='https://media.licdn.com/mpr/mpr/shrink_200_200/p/3/000/1bb/249/286e1a6.jpg'>
-   <br/>
-   <h1>
-     Bio
-   </h1>
-    <p class='block'>
-      Tom Judd is a Computer Engineering Major with an Entrepreneurship Minor at Northeastern University
-    </p>
-    <h1>
-      Useful Links
-    </h1>
-    <ul class='block'>
-      <li><a href='https://www.linkedin.com/pub/thomas-judd/4a/2a1/b97'>Tom's LinkedIn</a></li>
-      <li><a href='https://github.com/thomasjudd/'>Go to Tom Homepage</a></li>
-    </ul>
+<script src="https://thomasjudd.github.io/assets/unity/{{page.unity_dir}}/TemplateData/UnityProgress.js"></script>  
+<script src="https://thomasjudd.github.io/assets/unity/{{page.unity_dir}}/Release/UnityLoader.js"></script>
+<script>
+  var gameInstance = UnityLoader.instantiate("gameContainer", "https://thomasjudd.github.io/assets/unity/space-race/Relase/builds.json",{onProgress: UnityProgress});  
+</script>
+<div class="webgl-content">
+  <div id="gameContainer" style="width: 960px; height: 600px"></div>
+</div>
 </body>
 
